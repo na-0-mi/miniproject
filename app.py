@@ -19,18 +19,20 @@ ca = certifi.where()
 client = MongoClient('mongodb+srv://test:sparta@cluster0.l0pgj.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=ca)
 db = client.dbsparta
 
-# @app.route('/')
-# def home():
-#     return render_template('firstpage.html')
-
+# first page 진입
 @app.route('/')
+def intro():
+    return render_template('firstpage.html')
+
+# index page 진입
+@app.route('/home')
 def home():
     token_receive = request.cookies.get('mytoken')
 
     try:
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
 
-        return render_template('fistpage.html')
+        return render_template('index.html')
     except jwt.ExpiredSignatureError:
         return redirect(url_for("login", msg="로그인 시간이 만료되었습니다."))
     except jwt.exceptions.DecodeError:
