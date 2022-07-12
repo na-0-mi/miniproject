@@ -21,9 +21,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/css/jquery.mb.YTPlayer.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/jquery.mb.YTPlayer.min.js"></script>
 
-    <link rel="stylesheet" href="../static/css/intro.css">
-
     <title>동네어때</title>
+
     <style>
 
         body {
@@ -71,16 +70,15 @@
     </style>
 
     <script>
-        <!--        Youtube 영상 플레이어-->
+        <!--Youtube 영상 플레이어-->
         jQuery(function () {
             jQuery('#background').YTPlayer();
         });
 
-        //Index Page 이동
-        function goIndex() {
-            location.href = "/home"
+        //main 이동
+        function gomain() {
+            location.href = "/main"
         }
-
     </script>
 
 </head>
@@ -98,16 +96,15 @@
   autoPlay: true,
   stopMovieOnBlur: false,
   startAt: 0,
-  stopAt: 150,
-  opacity: 1
-}">
+  stopAt: 10,
+  opacity: 1}">
 </div>
 
 <!--인트로 문구-->
 <div class="main_text">
     <h1>동 네 어 때</h1>
     <h3>서울 동네정보의 모든것</h3>
-    <button onclick="goIndex()">시작</button>
+    <button onclick="gomain()">시작</button>
 </div>
 
 </body>
