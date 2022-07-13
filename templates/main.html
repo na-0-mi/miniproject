@@ -64,16 +64,6 @@
             justify-content: center;
         }
 
-        .mypost {
-            width: 95%;
-            max-width: 500px;
-            margin: 20px auto 0px auto;
-            padding: 20px;
-            box-shadow: 0px 0px 3px 0px gray;
-
-            display: none;
-        }
-
         .mybtns {
             display: flex;
             flex-direction: row;
@@ -86,16 +76,19 @@
         .mybtns > button {
             margin-right: 10px;
         }
+
         .mycards {
             margin: 20px auto 0px auto;
             width: 95%;
             max-width: 1200px;
         }
-        .col{
+
+        .col {
             transition: all 0.6s;
         }
-        .col:hover{
-            box-shadow: 3px 3px 3px black ;
+
+        .col:hover {
+            box-shadow: 3px 3px 3px black;
         }
     </style>
     <script>
@@ -113,27 +106,21 @@
                     data: {check_val: check_val},
                     success: (response) => {
                         let rows = response["msg"]
-                    for (let i = 0; i < rows.length; i++) {
-                        let gu = rows[i]['gu']
-                        let dong = rows[i]['dong']
-                        // let chung = rows[i]['chung']
-                        // let ann = rows[i]['ann']
-                        // let gyo = rows[i]['gyo']
-                        // let pyun = rows[i]['pyun']
+                        for (let i = 0; i < rows.length; i++) {
+                            let gu = rows[i]['gu']
+                            let dong = rows[i]['dong']
+                            let star = rows[i]['chung']
+                            let star1 = rows[i]['ann']
+                            let star2 = rows[i]['gyo']
+                            let star3 = rows[i]['pyun']
+
+                            let star_image = '⭐'.repeat(star)
+                            let star1_image = '⭐'.repeat(star1)
+                            let star2_image = '⭐'.repeat(star2)
+                            let star3_image = '⭐'.repeat(star3)
 
 
-                        let star = rows[i]['chung']
-                        let star1 = rows[i]['ann']
-                        let star2 = rows[i]['gyo']
-                        let star3 = rows[i]['pyun']
-
-                        let star_image = '⭐'.repeat(star)
-                        let star1_image = '⭐'.repeat(star1)
-                        let star2_image = '⭐'.repeat(star2)
-                        let star3_image = '⭐'.repeat(star3)
-
-
-                        let temp_html = `<div class="col">
+                            let temp_html = `<div class="col">
                                              <div class="card h-100">
                                                 <div class="card-body">
                                                 <p>${gu}</p>
@@ -145,20 +132,16 @@
                                                 </div>
                                             </div>
                                          </div>`
-                        $('#cards-box').append(temp_html)
+                            $('#cards-box').append(temp_html)
                         }
                     },
                 })
             } else {
                 $("input:radio[name='check']").prop('checked', false)
                 $('#cards-box').empty()
-                    listing()
+                listing()
             }
         }
-
-        $(document).ready(function () {
-            listing();
-        });
 
         function listing() {
             $('#cards-box').empty()
@@ -167,7 +150,6 @@
                 url: '/mini',
                 data: {},
                 success: function (response) {
-                    console.log(response['mini'])
                     let rows = response['mini']
                     for (let i = 0; i < rows.length; i++) {
                         let gu = rows[i]['gu']
@@ -202,42 +184,10 @@
             })
         }
 
-        function posting() {
-            let gu = $('#gu').val()
-            let dong = $('#dong').val()
-            let star = $('#star').val()
-            let star1 = $('#star1').val()
-            let star2 = $('#star2').val()
-            let star3 = $('#star3').val()
-
-            $.ajax({
-                type: 'POST',
-                url: '/mini',
-                data: {
-                    gu_give: gu,
-                    dong_give: dong,
-                    chung_give: star,
-                    ann_give: star1,
-                    gyo_give: star2,
-                    pyun_give: star3
-                },
-                success: function (response) {
-                    alert(response['msg'])
-                    window.location.reload();
-                    // window.location.href = "/main"
-                }
-            });
-
-        }
-
         function open_box() {
-            
-            window.location.href="/posting"
+            window.location.href = "/posting"
         }
 
-        function close_box() {
-            $('#post-box').hide()
-        }
     </script>
 </head>
 
@@ -249,20 +199,24 @@
 
 <div class="check-box">
     <div class="form-check form-check-inline">
-        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox" onclick="checking(event)" value="gu">
-        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">종로구</label>
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="종로구_checkbox"
+               onclick="checking(event)" value="종로구">
+        <label style="cursor:pointer" class="form-check-label" for="종로구_checkbox">종로구</label>
     </div>
     <div class="form-check form-check-inline">
-        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox1" onclick="checking(event)" value="gu">
-        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">성동구</label>
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="성동구_checkbox"
+               onclick="checking(event)" value="성동구">
+        <label style="cursor:pointer" class="form-check-label" for="성동구_checkbox">성동구</label>
     </div>
-        <div class="form-check form-check-inline">
-        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox2" onclick="checking(event)" value="gu">
-        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">용산구</label>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="용산구_checkbox"
+               onclick="checking(event)" value="용산구">
+        <label style="cursor:pointer" class="form-check-label" for="용산구_checkbox">용산구</label>
     </div>
-        <div class="form-check form-check-inline">
-        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox3" onclick="checking(event)" value="gu">
-        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">중구</label>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="중구_checkbox"
+               onclick="checking(event)" value="중구">
+        <label style="cursor:pointer" class="form-check-label" for="중구_checkbox">중구</label>
     </div>
     <div class="form-check form-check-inline">
         <button type="button" class="btn btn-outline-secondary" onclick="checking(event)">선택해제</button>

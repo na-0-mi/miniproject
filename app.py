@@ -61,7 +61,7 @@ def check_post():
 @app.route("/boxcheck", methods=["POST"])
 def boxcheck():
     checkval_receive = request.form['check_val']
-    result = list(db.mini.find({'title': {"$regex": checkval_receive}}, {'_id': False}))
+    result = list(db.mini.find({'gu': {"$regex": checkval_receive}}, {'_id': False}))
     if checkval_receive == "all":
         mini_list = list(db.mini.find({}, {'_id': False}))
         return jsonify({'msg': mini_list})
