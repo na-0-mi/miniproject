@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
 <!-- Webpage Title -->
 <title>Home | SWEETER</title>
 
@@ -20,145 +19,159 @@
 
 
 <title>동네 메인 사이트</title>
-<style>
-    h1 {
-        display: inline-block;
-        vertical-align: middle;
-        color: white;
-        margin: 0.5rem;
-        padding: 0;
-    }
+<head>
+    <style>
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            color: white;
+            margin: 0.5rem;
+            padding: 0;
+        }
 
-    nav {
-        display: inline-block;
-        vertical-align: middle;
-    }
+        nav {
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-    header {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.topstarnews.net/news/photo/201807/456143_108614_510.jpg');
-        background-size: cover;
-        padding: 20px;
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
+        header {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo_red.png");
+            background-size: cover;
+            padding: 20px;0
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
 
-    a {
-        display: block;
-        text-align: center;
-        margin: .25rem;
-        padding: .5rem 1rem;
-        text-decoration: none;
-        font-weight: bold;
-        background: transparent;
-    }
+        a {
+            display: block;
+            text-align: center;
+            margin: .25rem;
+            padding: .5rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            background: transparent;
+        }
 
-    a:hover {
-        background: transparent;
-    }
-
-
-    html {
-        box-sizing: border-box;
-    }
-
-    *, *:before, *:after {
-        box-sizing: inherit;
-    }
-
-    .b > button {
-        width: 140px;
-        height: 50px;
-
-        background-color: transparent;
-        color: white;
-
-        border-radius: 50px;
-
-        border: 1px solid white;
-
-        margin-top: 1px;
-
-    }
-
-    .b > button:hover {
-        border: 2px solid white;
-    }
-
-    * {
-        font-family: 'Gowun Dodum', sans-serif;
-    }
-
-    .search-box {
-        width: 70%;
-        margin: 50px auto;
-        max-width: 700px;
-    }
-
-    .mycards {
-        margin: 20px auto 0px auto;
-        width: 95%;
-        max-width: 1200px;
-    }
-
-    .mypost {
-        width: 100%;
-        max-width: 700px;
-        padding: 20px;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-
-        box-shadow: 0px 0px 3px 0px gray;
-
-        display: none;
-
-    }
-
-</style>
-<script>
-    $(document).ready(function () {
-        listing();
-    });
-
-    function listing() {
-        $('#cards-box').empty()
-        $.ajax({
-            type: 'GET',
-            url: '/dong',
-            data: {},
-            success: function (response) {
-                console.log(response['dong'])
-                let rows = response['dong']
-                for (let i = 0; i < rows.length; i++) {
-                    // let chung = rows[i]['chung']
-                    // let ann = rows[i]['ann']
-                    // let gyo = rows[i]['gyo']
-                    // let pyun = rows[i]['pyun']
-
-                    let star = rows[i]['chung']
-                    let star1 = rows[i]['ann']
-                    let star2 = rows[i]['gyo']
-                    let star3 = rows[i]['pyun']
-
-                    let star_image = '⭐'.repeat(star)
-                    let star1_image = '⭐'.repeat(star1)
-                    let star2_image = '⭐'.repeat(star2)
-                    let star3_image = '⭐'.repeat(star3)
+        a:hover {
+            background: transparent;
+        }
 
 
-                    let temp_html = `<div class="col">
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .b > button {
+            width: 140px;
+            height: 50px;
+
+            background-color: transparent;
+            color: white;
+
+            border-radius: 50px;
+
+            border: 1px solid white;
+
+            margin-top: 1px;
+
+        }
+
+        .b > button:hover {
+            border: 2px solid white;
+        }
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .search-box {
+            width: 70%;
+            margin: 50px auto;
+            max-width: 700px;
+        }
+
+        .search-box1 {
+            width: 70%;
+            margin: 50px auto;
+            max-width: 700px;
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 95%;
+            max-width: 1200px;
+            background-color: #e8344e;
+            color:rosybrown;
+        }
+
+        /*.mypost {*/
+        /*    width: 100%;*/
+        /*    max-width: 700px;*/
+        /*    padding: 20px;*/
+        /*    margin-top: 20px;*/
+        /*    margin-left: auto;*/
+        /*    margin-right: auto;*/
+
+        /*    box-shadow: 0px 0px 3px 0px gray;*/
+
+        /*    display: none;*/
+
+        /*}*/
+
+        p.highlight{
+            background-color: #e8344e;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            listing();
+        });
+
+        function listing() {
+            $('#cards-box').empty()
+            $.ajax({
+                type: 'GET',
+                url: '/mini',
+                data: {},
+                success: function (response) {
+                    console.log(response['mini'])
+                    let rows = response['mini']
+                    for (let i = 0; i < rows.length; i++) {
+                        let gu = rows[i]['gu']
+                        let dong = rows[i]['dong']
+                        // let chung = rows[i]['chung']
+                        // let ann = rows[i]['ann']
+                        // let gyo = rows[i]['gyo']
+                        // let pyun = rows[i]['pyun']
+                        let star = rows[i]['chung']
+                        let star1 = rows[i]['ann']
+                        let star2 = rows[i]['gyo']
+                        let star3 = rows[i]['pyun']
+
+                        let star_image = '⭐'.repeat(star)
+                        let star1_image = '⭐'.repeat(star1)
+                        let star2_image = '⭐'.repeat(star2)
+                        let star3_image = '⭐'.repeat(star3)
+
+
+                        let temp_html = `<div class="col">
                                              <div class="card h-100">
                                                 <div class="card-body">
-                                                <p></p>
+                                                <p>${gu}</p>
+                                                <p>${dong}</p>
                                                     <p>청결점수:${star_image}</p>
                                                     <p>안전점수:${star1_image}</p>
                                                     <p>교통점수:${star2_image}</p>
@@ -166,38 +179,127 @@
                                                 </div>
                                             </div>
                                          </div>`
-                    $('#cards-box').append(temp_html)
+                        $('#cards-box').append(temp_html)
+
+                    }
+                }
+            })
+        }
+
+        function sign_out() {
+            $.removeCookie('mytoken', {path: '/'});
+            alert('로그아웃!')
+            window.location.href = "/login"
+        }
+
+        function go_posting() {
+            window.location.href = "/posting";
+        }
+
+       let words = {{words | tojson}};
+        let word_list = [];
+        for (let i = 0; i < words.length; i++) {
+            word_list.push(words[i]["gu"],
+                words[i]["dong"],
+                words[i]["chung"],
+                words[i]["ann"],
+                words[i]["gyo"],
+                words[i]["pyun"])
+        }
+            // let words = {{ words | tojson}};
+            // let word_list = [];
+            // word_list.push(words[i]["dong"])
+            //     word_list.push(words[i]["chung"])
+            //         word_list.push(words[i]["ann"])
+            //             word_list.push(words[i]["gyo"])
+            //                 word_list.push(words[i]["pyun"])
+            console.log(word_list)
+
+            function find_word() {
+                let gu = $("#input-word").val();
+                if(gu == ""){
+                    alert('빈문자열입니다')
+                    return
+                }
+                if (word_list.includes(gu)) {
+                    // 리스트에 있으면 하이라이트
+                    $(`#word-${gu}`).addClass('highlight')
+                    // $(`#word-${gu}`)[0].scrollIntoView();
+
+                } else {
+                    //리스트에 없으면 등록하는 페이지로
+                    window.location.href = `/posting`
 
                 }
             }
-        })
-    }
+
+            let dong = $("#input-word").val();
+            //     if( word_list =""){
+            //         alert("pleas write something first :)")
+            //     return
+            // }
+            if (word_list.includes(dong)) {
+                // 리스트에 있으면 하이라이트
+                $(`words#-${dong}`).addClass("highLight")
+                // $(`#-${}`)[0].scrollIntoView();
+            } else {
+                //리스트에 없으면 등록하는 페이지로
+            }
 
 
-    function gomain() {
-        location.href = "/main"
-    }
+            let chung = $("#input-word").val();
+            //     if( word_list =""){
+            //         alert("pleas write something first :)")
+            //     return
+            // }
+            if (word_list.includes(chung)) {
+                // 리스트에 있으면 하이라이트
+                $(`words#-${chung}`).addClass("highLight")
+                // $(`#-${}`)[0].scrollIntoView();
+            } else {
+                //리스트에 없으면 등록하는 페이지로
+            }
 
-    $(document).ready(function () {
-        get_posts()
-    })
+            let ann = $("#input-word").val();
+            //     if( word_list =""){
+            //         alert("pleas write something first :)")
+            //     return
+            // }
+            if (word_list.includes(ann)) {
+                // 리스트에 있으면 하이라이트
+                $(`words#-${ann}`).addClass("highLight")
+                // $(`#-${}`)[0].scrollIntoView();
+            } else {
+                //리스트에 없으면 등록하는 페이지로
+            }
+            let gyo = $("#input-word").val();
+            //     if( word_list =""){
+            //         alert("pleas write something first :)")
+            //     return
+            // }
+            if (word_list.includes(gyo)) {
+                // 리스트에 있으면 하이라이트
+                $(`words#-${gyo}`).addClass("highLight")
+                // $(`#-${}`)[0].scrollIntoView();
+            } else {
+                //리스트에 없으면 등록하는 페이지로
+            }
 
-    function sign_out() {
-        $.removeCookie('mytoken', {path: '/'});
-        alert('로그아웃!')
-        window.location.href = "/login"
-    }
+            let pyun = $("#input-word").val();
+            //     if( word_list =""){
+            //         alert("pleas write something first :)")
+            //     return
+            // }
+            if (word_list.includes(pyun)) {
+                // 리스트에 있으면 하이라이트
+                $(`words#-${pyun}`).addClass("highLight")
+                // $(`#-${}`)[0].scrollIntoView();
+            } else {
+                //리스트에 없으면 등록하는 페이지로
+            }
 
-    function go_posting() {
-        window.location.href = "/posting";
-    }
-
-
-</script>
-<head>
+    </script>
 </head>
-
-
 <body>
 <header>
     <h1>
@@ -219,56 +321,72 @@
 
 <div class="search-box d-flex justify-content-center">
     <input id="input-word" class="form-control" style="margin-right: 0.5rem">
-    <button class="btn btn-light" onclick="go_posting()"
-    <i class="fa fa-search"></i></button>
+    <button class="btn btn-light" onclick="find_word()"><i class="fa fa-search"></i></button>
+    <button class="btn btn-light" onclick="go_posting()"><i class="fa fa-search-plus"></i></button>
 </div>
-<div class="mypost" id="post-box">
-    <div class="input-group mb-3">
-        <label class="input-group-text" for="star">청결 점수</label>
-        <select class="form-select" id="star">
-            <option selected>-- 선택하기 --</option>
-            <option value="1">⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-        </select>
-        <label class="input-group-text" for="star1">안전 점수</label>
-        <select class="form-select" id="star1">
-            <option selected>-- 선택하기 --</option>
-            <option value="1">⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-        </select>
-
-        <label class="input-group-text" for="star2">교통 점수</label>
-        <select class="form-select" id="star2">
-            <option selected>-- 선택하기 --</option>
-            <option value="1">⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-        </select>
-    </div>
-    <label class="input-group-text" for="star3">편리 점수</label>
-    <select class="form-select" id="star3">
-        <option selected>-- 선택하기 --</option>
-        <option value="1">⭐</option>
-        <option value="2">⭐⭐</option>
-        <option value="3">⭐⭐⭐</option>
-        <option value="4">⭐⭐⭐⭐</option>
-        <option value="5">⭐⭐⭐⭐⭐</option>
-    </select>
-</div>
+<!--<div class="mypost" id="post-box">-->
+<!--    <div class="input-group mb-3">-->
 
 
-</div>
+<!--        <label class="input-group-text" for="star">동 선택</label>-->
+<!--        <select class="form-select" id="dong">-->
+<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
+<!--            <option value="동동동">동동동</option>-->
+<!--            <option value="무슨동">무슨동</option>-->
+<!--            <option value="땡땡동">땡땡동</option>-->
+<!--            <option value="가나동">가나동</option>-->
+<!--            <option value="미친동">미친동</option>-->
+<!--        </select>-->
+<!--        <label class="input-group-text" for="star">구 선택</label>-->
+<!--        <select class="form-select" id="gu">-->
+<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
+<!--            <option value="종로구">종로구</option>-->
+<!--            <option value="무슨구">무슨구</option>-->
+<!--            <option value="야나구">야나구</option>-->
+<!--            <option value="아아구">아아구</option>-->
+<!--            <option value="오오구">오오구</option>-->
+<!--        </select>-->
+<!--        <label class="input-group-text" for="star">청결 점수</label>-->
+<!--        <select class="form-select" id="star">-->
+<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
+<!--            <option value="1">⭐</option>-->
+<!--            <option value="2">⭐⭐</option>-->
+<!--            <option value="3">⭐⭐⭐</option>-->
+<!--            <option value="4">⭐⭐⭐⭐</option>-->
+<!--            <option value="5">⭐⭐⭐⭐⭐</option>-->
+<!--        </select>-->
+<!--        <label class="input-group-text" for="star1">안전 점수</label>-->
+<!--        <select class="form-select" id="star1">-->
+<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
+<!--            <option value="1">⭐</option>-->
+<!--            <option value="2">⭐⭐</option>-->
+<!--            <option value="3">⭐⭐⭐</option>-->
+<!--            <option value="4">⭐⭐⭐⭐</option>-->
+<!--            <option value="5">⭐⭐⭐⭐⭐</option>-->
+<!--        </select>-->
+
+<!--        <label class="input-group-text" for="star2">교통 점수</label>-->
+<!--        <select class="form-select" id="star2">-->
+<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
+<!--            <option value="1">⭐</option>-->
+<!--            <option value="2">⭐⭐</option>-->
+<!--            <option value="3">⭐⭐⭐</option>-->
+<!--            <option value="4">⭐⭐⭐⭐</option>-->
+<!--            <option value="5">⭐⭐⭐⭐⭐</option>-->
+<!--        </select>-->
+<!--    </div>-->
+<!--    <label class="input-group-text" for="star3">편리 점수</label>-->
+<!--    <select class="form-select" id="star3">-->
+<!--        <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
+<!--        <option value="1">⭐</option>-->
+<!--        <option value="2">⭐⭐</option>-->
+<!--        <option value="3">⭐⭐⭐</option>-->
+<!--        <option value="4">⭐⭐⭐⭐</option>-->
+<!--        <option value="5">⭐⭐⭐⭐⭐</option>-->
+<!--    </select>-->
+<!--</div>-->
 <div class="mycards">
-    <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
-    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box"></div>
 </div>
 </body>
 </html>
