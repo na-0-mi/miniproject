@@ -1,141 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<!-- Webpage Title -->
-<title>Home | SWEETER</title>
-
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Bulma CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-<!-- Font Awesome CSS -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<!-- JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-
-
-<title>동네 메인 사이트</title>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>여행 어때</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <style>
-        h1 {
-            display: inline-block;
-            vertical-align: middle;
-            color: white;
-            margin: 0.5rem;
-            padding: 0;
-        }
-
-        nav {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        header {
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo_red.png");
-            background-size: cover;
-            padding: 20px;0
-            display: grid;
-            grid-auto-flow: column;
-            grid-template-columns: 1fr;
-            align-items: center;
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            margin: .25rem;
-            padding: .5rem 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            background: transparent;
-        }
-
-        a:hover {
-            background: transparent;
-        }
-
-
-        html {
-            box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .b > button {
-            width: 140px;
-            height: 50px;
-
-            background-color: transparent;
-            color: white;
-
-            border-radius: 50px;
-
-            border: 1px solid white;
-
-            margin-top: 1px;
-
-        }
-
-        .b > button:hover {
-            border: 2px solid white;
-        }
-
         * {
             font-family: 'Gowun Dodum', sans-serif;
         }
 
-        .search-box {
-            width: 70%;
-            margin: 50px auto;
-            max-width: 700px;
+        .title {
+            width: 100%;
+            height: 250px;
+            font-size: 45px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://cis.seoul.go.kr/TotalAlimi_new/SearchMap.action?cmd=searchmap');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .search-box1 {
-            width: 70%;
-            margin: 50px auto;
-            max-width: 700px;
+        .title > button {
+            width: 200px;
+            height: 40px;
+            font-size: 15px;
+
+            background-color: transparent;
+
+            color: whitesmoke;
+
+            border-radius: 50px;
+            border: 1px solid white;
+
+            margin-top: 15px;
         }
 
+        .mytitle > button:hover {
+            border: 2px solid white;
+        }
+
+        .check-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+
+            display: none;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .mybtns > button {
+            margin-right: 10px;
+        }
         .mycards {
             margin: 20px auto 0px auto;
             width: 95%;
             max-width: 1200px;
-            background-color: #e8344e;
-            color:rosybrown;
         }
-
-        /*.mypost {*/
-        /*    width: 100%;*/
-        /*    max-width: 700px;*/
-        /*    padding: 20px;*/
-        /*    margin-top: 20px;*/
-        /*    margin-left: auto;*/
-        /*    margin-right: auto;*/
-
-        /*    box-shadow: 0px 0px 3px 0px gray;*/
-
-        /*    display: none;*/
-
-        /*}*/
-
-        p.highlight{
-            background-color: #e8344e;
+        .col{
+            transition: all 0.6s;
+        }
+        .col:hover{
+            box-shadow: 3px 3px 3px black ;
         }
     </style>
     <script>
+        $(document).ready(function () {
+            listing();
+        });
+
+        function checking(event) {
+            let check_val = event.target.value
+            if (event.target.checked) {
+                $("#cards-box").empty()
+                $.ajax({
+                    type: "POST",
+                    url: "/boxcheck",
+                    data: {check_val: check_val},
+                    success: (response) => {
+                        let rows = response["msg"]
+                    for (let i = 0; i < rows.length; i++) {
+                        let gu = rows[i]['gu']
+                        let dong = rows[i]['dong']
+                        // let chung = rows[i]['chung']
+                        // let ann = rows[i]['ann']
+                        // let gyo = rows[i]['gyo']
+                        // let pyun = rows[i]['pyun']
+
+
+                        let star = rows[i]['chung']
+                        let star1 = rows[i]['ann']
+                        let star2 = rows[i]['gyo']
+                        let star3 = rows[i]['pyun']
+
+                        let star_image = '⭐'.repeat(star)
+                        let star1_image = '⭐'.repeat(star1)
+                        let star2_image = '⭐'.repeat(star2)
+                        let star3_image = '⭐'.repeat(star3)
+
+
+                        let temp_html = `<div class="col">
+                                             <div class="card h-100">
+                                                <div class="card-body">
+                                                <p>${gu}</p>
+                                                <p>${dong}</p>
+                                                    <p>청결점수:${star_image}</p>
+                                                    <p>안전점수:${star1_image}</p>
+                                                    <p>교통점수:${star2_image}</p>
+                                                    <p>편리점수:${star3_image}</p>
+                                                </div>
+                                            </div>
+                                         </div>`
+                        $('#cards-box').append(temp_html)
+                        }
+                    },
+                })
+            } else {
+                $("input:radio[name='check']").prop('checked', false)
+                $('#cards-box').empty()
+                    listing()
+            }
+        }
+
         $(document).ready(function () {
             listing();
         });
@@ -152,10 +172,6 @@
                     for (let i = 0; i < rows.length; i++) {
                         let gu = rows[i]['gu']
                         let dong = rows[i]['dong']
-                        // let chung = rows[i]['chung']
-                        // let ann = rows[i]['ann']
-                        // let gyo = rows[i]['gyo']
-                        // let pyun = rows[i]['pyun']
                         let star = rows[i]['chung']
                         let star1 = rows[i]['ann']
                         let star2 = rows[i]['gyo']
@@ -186,207 +202,77 @@
             })
         }
 
-        function sign_out() {
-            $.removeCookie('mytoken', {path: '/'});
-            alert('로그아웃!')
-            window.location.href = "/login"
-        }
+        function posting() {
+            let gu = $('#gu').val()
+            let dong = $('#dong').val()
+            let star = $('#star').val()
+            let star1 = $('#star1').val()
+            let star2 = $('#star2').val()
+            let star3 = $('#star3').val()
 
-        function go_posting() {
-            window.location.href = "/posting";
-        }
-
-       let words = {{words | tojson}};
-        let word_list = [];
-        for (let i = 0; i < words.length; i++) {
-            word_list.push(words[i]["gu"],
-                words[i]["dong"],
-                words[i]["chung"],
-                words[i]["ann"],
-                words[i]["gyo"],
-                words[i]["pyun"])
-        }
-            // let words = {{ words | tojson}};
-            // let word_list = [];
-            // word_list.push(words[i]["dong"])
-            //     word_list.push(words[i]["chung"])
-            //         word_list.push(words[i]["ann"])
-            //             word_list.push(words[i]["gyo"])
-            //                 word_list.push(words[i]["pyun"])
-            console.log(word_list)
-
-            function find_word() {
-                let gu = $("#input-word").val();
-                if(gu == ""){
-                    alert('빈문자열입니다')
-                    return
+            $.ajax({
+                type: 'POST',
+                url: '/mini',
+                data: {
+                    gu_give: gu,
+                    dong_give: dong,
+                    chung_give: star,
+                    ann_give: star1,
+                    gyo_give: star2,
+                    pyun_give: star3
+                },
+                success: function (response) {
+                    alert(response['msg'])
+                    window.location.reload();
+                    // window.location.href = "/main"
                 }
-                if (word_list.includes(gu)) {
-                    // 리스트에 있으면 하이라이트
-                    $(`#word-${gu}`).addClass('highlight')
-                    // $(`#word-${gu}`)[0].scrollIntoView();
+            });
 
-                } else {
-                    //리스트에 없으면 등록하는 페이지로
-                    window.location.href = `/posting`
+        }
 
-                }
-            }
+        function open_box() {
+            
+            window.location.href="/posting"
+        }
 
-            let dong = $("#input-word").val();
-            //     if( word_list =""){
-            //         alert("pleas write something first :)")
-            //     return
-            // }
-            if (word_list.includes(dong)) {
-                // 리스트에 있으면 하이라이트
-                $(`words#-${dong}`).addClass("highLight")
-                // $(`#-${}`)[0].scrollIntoView();
-            } else {
-                //리스트에 없으면 등록하는 페이지로
-            }
-
-
-            let chung = $("#input-word").val();
-            //     if( word_list =""){
-            //         alert("pleas write something first :)")
-            //     return
-            // }
-            if (word_list.includes(chung)) {
-                // 리스트에 있으면 하이라이트
-                $(`words#-${chung}`).addClass("highLight")
-                // $(`#-${}`)[0].scrollIntoView();
-            } else {
-                //리스트에 없으면 등록하는 페이지로
-            }
-
-            let ann = $("#input-word").val();
-            //     if( word_list =""){
-            //         alert("pleas write something first :)")
-            //     return
-            // }
-            if (word_list.includes(ann)) {
-                // 리스트에 있으면 하이라이트
-                $(`words#-${ann}`).addClass("highLight")
-                // $(`#-${}`)[0].scrollIntoView();
-            } else {
-                //리스트에 없으면 등록하는 페이지로
-            }
-            let gyo = $("#input-word").val();
-            //     if( word_list =""){
-            //         alert("pleas write something first :)")
-            //     return
-            // }
-            if (word_list.includes(gyo)) {
-                // 리스트에 있으면 하이라이트
-                $(`words#-${gyo}`).addClass("highLight")
-                // $(`#-${}`)[0].scrollIntoView();
-            } else {
-                //리스트에 없으면 등록하는 페이지로
-            }
-
-            let pyun = $("#input-word").val();
-            //     if( word_list =""){
-            //         alert("pleas write something first :)")
-            //     return
-            // }
-            if (word_list.includes(pyun)) {
-                // 리스트에 있으면 하이라이트
-                $(`words#-${pyun}`).addClass("highLight")
-                // $(`#-${}`)[0].scrollIntoView();
-            } else {
-                //리스트에 없으면 등록하는 페이지로
-            }
-
+        function close_box() {
+            $('#post-box').hide()
+        }
     </script>
 </head>
+
 <body>
-<header>
-    <h1>
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/main">
-                <strong class="is-sparta">동네 어때</strong>
-            </a>
-        </div>
-    </h1>
-    <nav>
-        <div class="b">
-            <button onclick="sign_out()">로그아웃</button>
-            <button onclick="go_posting()">동네정보입력</button>
-        </div>
-    </nav>
-</header>
-
-{% block content %}{% endblock %}
-
-<div class="search-box d-flex justify-content-center">
-    <input id="input-word" class="form-control" style="margin-right: 0.5rem">
-    <button class="btn btn-light" onclick="find_word()"><i class="fa fa-search"></i></button>
-    <button class="btn btn-light" onclick="go_posting()"><i class="fa fa-search-plus"></i></button>
+<div class="title">
+    <h1>NULL 위한 정보</h1>
+    <button onclick="open_box()">등록하기</button>
 </div>
-<!--<div class="mypost" id="post-box">-->
-<!--    <div class="input-group mb-3">-->
 
-
-<!--        <label class="input-group-text" for="star">동 선택</label>-->
-<!--        <select class="form-select" id="dong">-->
-<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
-<!--            <option value="동동동">동동동</option>-->
-<!--            <option value="무슨동">무슨동</option>-->
-<!--            <option value="땡땡동">땡땡동</option>-->
-<!--            <option value="가나동">가나동</option>-->
-<!--            <option value="미친동">미친동</option>-->
-<!--        </select>-->
-<!--        <label class="input-group-text" for="star">구 선택</label>-->
-<!--        <select class="form-select" id="gu">-->
-<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
-<!--            <option value="종로구">종로구</option>-->
-<!--            <option value="무슨구">무슨구</option>-->
-<!--            <option value="야나구">야나구</option>-->
-<!--            <option value="아아구">아아구</option>-->
-<!--            <option value="오오구">오오구</option>-->
-<!--        </select>-->
-<!--        <label class="input-group-text" for="star">청결 점수</label>-->
-<!--        <select class="form-select" id="star">-->
-<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
-<!--            <option value="1">⭐</option>-->
-<!--            <option value="2">⭐⭐</option>-->
-<!--            <option value="3">⭐⭐⭐</option>-->
-<!--            <option value="4">⭐⭐⭐⭐</option>-->
-<!--            <option value="5">⭐⭐⭐⭐⭐</option>-->
-<!--        </select>-->
-<!--        <label class="input-group-text" for="star1">안전 점수</label>-->
-<!--        <select class="form-select" id="star1">-->
-<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
-<!--            <option value="1">⭐</option>-->
-<!--            <option value="2">⭐⭐</option>-->
-<!--            <option value="3">⭐⭐⭐</option>-->
-<!--            <option value="4">⭐⭐⭐⭐</option>-->
-<!--            <option value="5">⭐⭐⭐⭐⭐</option>-->
-<!--        </select>-->
-
-<!--        <label class="input-group-text" for="star2">교통 점수</label>-->
-<!--        <select class="form-select" id="star2">-->
-<!--            <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
-<!--            <option value="1">⭐</option>-->
-<!--            <option value="2">⭐⭐</option>-->
-<!--            <option value="3">⭐⭐⭐</option>-->
-<!--            <option value="4">⭐⭐⭐⭐</option>-->
-<!--            <option value="5">⭐⭐⭐⭐⭐</option>-->
-<!--        </select>-->
-<!--    </div>-->
-<!--    <label class="input-group-text" for="star3">편리 점수</label>-->
-<!--    <select class="form-select" id="star3">-->
-<!--        <option selected>&#45;&#45; 선택하기 &#45;&#45;</option>-->
-<!--        <option value="1">⭐</option>-->
-<!--        <option value="2">⭐⭐</option>-->
-<!--        <option value="3">⭐⭐⭐</option>-->
-<!--        <option value="4">⭐⭐⭐⭐</option>-->
-<!--        <option value="5">⭐⭐⭐⭐⭐</option>-->
-<!--    </select>-->
-<!--</div>-->
+<div class="check-box">
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox" onclick="checking(event)" value="gu">
+        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">종로구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox1" onclick="checking(event)" value="gu">
+        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">성동구</label>
+    </div>
+        <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox2" onclick="checking(event)" value="gu">
+        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">용산구</label>
+    </div>
+        <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="gu_checkbox3" onclick="checking(event)" value="gu">
+        <label style="cursor:pointer" class="form-check-label" for="gu_checkbox">중구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <button type="button" class="btn btn-outline-secondary" onclick="checking(event)">선택해제</button>
+    </div>
+</div>
 <div class="mycards">
-    <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box"></div>
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
+    </div>
 </div>
+
+
 </body>
 </html>
