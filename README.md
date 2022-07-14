@@ -48,6 +48,7 @@
 <h2> 📷 와이어프레임 📷 </h2>
 
 <img width="300" alt="썸네일" src="https://user-images.githubusercontent.com/103303516/178934532-9e29853e-0d6f-4eb0-9fa5-8a8f0b3aad12.png">
+<p>------------------------------------------</p>
 <img width="300" alt="썸네일" src="https://user-images.githubusercontent.com/103303516/178939459-e4f9c4d5-02c1-4e25-a0c6-d50321bc1b76.png">
 <img width="300" alt="썸네일" src="https://user-images.githubusercontent.com/103303516/178942645-84e2d40f-b59f-4700-9716-ecabb122da22.png">
 <img width="300" alt="썸네일" src="https://user-images.githubusercontent.com/103303516/178939737-1e94db53-2e9d-42aa-a4cf-15240c7a8ebf.png">
