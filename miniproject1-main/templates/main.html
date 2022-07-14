@@ -1,0 +1,408 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>동네 어때</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <style>
+        header {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            color: white;
+            margin: 0.5rem;
+            padding: 0;
+        }
+
+        nav {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        li.icon {
+            flex-basis: 25%;
+        }
+
+        header {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('');
+            background-position: center 60%;
+            background-size: cover;
+            padding: 20px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: .25rem;
+            padding: .5rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            background: transparent;
+        }
+
+        a:hover {
+            background: transparent;
+        }
+
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .b > button {
+            width: 120px;
+            height: 40px;
+
+            background-color: transparent;
+            color: white;
+
+            border-radius: 50px;
+
+            border: 1px solid white;
+
+            margin-top: 1px;
+
+        }
+
+        .b > button:hover {
+            border: 2px solid white;
+        }
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .check-box {
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .wrap {
+            background-color: whtie;
+
+            width: 100%;
+            height: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            listing();
+        });
+
+        function checking(event) {
+            let check_val = event.target.value
+            if (event.target.checked) {
+                $("#cards-box").empty()
+                $.ajax({
+                    type: "POST",
+                    url: "/boxcheck",
+                    data: {check_val: check_val},
+                    success: (response) => {
+                        let rows = response["msg"]
+                        for (let i = 0; i < rows.length; i++) {
+                            let gu = rows[i]['gu']
+                            let dong = rows[i]['dong']
+                            let star = rows[i]['chung']
+                            let star1 = rows[i]['ann']
+                            let star2 = rows[i]['gyo']
+                            let star3 = rows[i]['pyun']
+
+                            let star_image = '⭐'.repeat(star)
+                            let star1_image = '⭐'.repeat(star1)
+                            let star2_image = '⭐'.repeat(star2)
+                            let star3_image = '⭐'.repeat(star3)
+
+
+                            let temp_html = `<div class="col">
+                                             <div class="card h-100">
+                                                <div class="card-body">
+                                                <p>${gu}</p>
+                                                <p>${dong}</p>
+                                                    <p>청결점수:${star_image}</p>
+                                                    <p>안전점수:${star1_image}</p>
+                                                    <p>교통점수:${star2_image}</p>
+                                                    <p>편리점수:${star3_image}</p>
+                                                </div>
+                                            </div>
+                                         </div>`
+                            $('#cards-box').append(temp_html)
+                        }
+                    },
+                })
+            } else {
+                $("input:radio[name='check']").prop('checked', false)
+                $('#cards-box').empty()
+                listing()
+            }
+        }
+
+        function listing() {
+            $('#cards-box').empty()
+            $.ajax({
+                type: 'GET',
+                url: '/mini',
+                data: {},
+                success: function (response) {
+                    let rows = response['mini']
+                    for (let i = 0; i < rows.length; i++) {
+                        let gu = rows[i]['gu']
+                        let dong = rows[i]['dong']
+                        let star = rows[i]['chung']
+                        let star1 = rows[i]['ann']
+                        let star2 = rows[i]['gyo']
+                        let star3 = rows[i]['pyun']
+
+                        let star_image = '⭐'.repeat(star)
+                        let star1_image = '⭐'.repeat(star1)
+                        let star2_image = '⭐'.repeat(star2)
+                        let star3_image = '⭐'.repeat(star3)
+
+
+                        let temp_html = `<div class="col">
+                                             <div class="card h-100">
+                                                <div class="card-body">
+                                                <p>${gu}</p>
+                                                <p>${dong}</p>
+                                                    <p>청결점수:${star_image}</p>
+                                                    <p>안전점수:${star1_image}</p>
+                                                    <p>교통점수:${star2_image}</p>
+                                                    <p>편리점수:${star3_image}</p>
+                                                </div>
+                                            </div>
+                                         </div>`
+                        $('#cards-box').append(temp_html)
+
+                    }
+                }
+            })
+        }
+
+        function go_posting() {
+            window.location.href = "/posting"
+        }
+
+        function go_user() {
+            window.location.href = "/user"
+        }
+
+        function sign_out() {
+            $.removeCookie('mytoken', {path: '/'});
+            alert('로그아웃!')
+            window.location.href = "/login"
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/main">
+                <strong class="is-sparta">동네 어때</strong>
+            </a>
+        </div>
+    </h1>
+    <nav>
+        <div class="b">
+            <button onclick="go_posting()">동네정보입력</button>
+            <button onclick="go_user()">마이페이지</button>
+            <button onclick="sign_out()">로그아웃</button>
+        </div>
+    </nav>
+    <div class="banner_set">
+        <div class="banner" onclick="window.location.href='/'"></div>
+        <span class="nickname_banner">
+            <span class="nickname">{{ user_info.nickname }}</span>님,
+                    안녕하세요.</span>
+    </div>
+</header>
+
+
+<body>
+
+<div class="check-box">
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강남구_checkbox"
+               onclick="checking(event)" value="강남구">
+        <label style="cursor:pointer" class="form-check-label" for="강남구_checkbox">강남구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강동구_checkbox"
+               onclick="checking(event)" value="성동구">
+        <label style="cursor:pointer" class="form-check-label" for="강동구_checkbox">강동구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강북구_checkbox"
+               onclick="checking(event)" value="강북구">
+        <label style="cursor:pointer" class="form-check-label" for="강북구_checkbox">강북구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="강서구_checkbox"
+               onclick="checking(event)" value="강서구">
+        <label style="cursor:pointer" class="form-check-label" for="강서구_checkbox">강서구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="관악구_checkbox"
+               onclick="checking(event)" value="관악구">
+        <label style="cursor:pointer" class="form-check-label" for="관악구_checkbox">관악구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="광진구_checkbox"
+               onclick="checking(event)" value="광진구">
+        <label style="cursor:pointer" class="form-check-label" for="광진구_checkbox">광진구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="구로구_checkbox"
+               onclick="checking(event)" value="구로구">
+        <label style="cursor:pointer" class="form-check-label" for="구로구_checkbox">구로구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="금천구_checkbox"
+               onclick="checking(event)" value="금천구">
+        <label style="cursor:pointer" class="form-check-label" for="금천구_checkbox">금천구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="노원구_checkbox"
+               onclick="checking(event)" value="노원구">
+        <label style="cursor:pointer" class="form-check-label" for="노원구_checkbox">노원구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="도봉구_checkbox"
+               onclick="checking(event)" value="도봉구">
+        <label style="cursor:pointer" class="form-check-label" for="도봉구_checkbox">도봉구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="동대문구_checkbox"
+               onclick="checking(event)" value="동대문구">
+        <label style="cursor:pointer" class="form-check-label" for="동대문구_checkbox">동대문구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="동작구_checkbox"
+               onclick="checking(event)" value="동작구">
+        <label style="cursor:pointer" class="form-check-label" for="동작구_checkbox">동작구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="마포구_checkbox"
+               onclick="checking(event)" value="마포구">
+        <label style="cursor:pointer" class="form-check-label" for="마포구_checkbox">마포구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="서대문구_checkbox"
+               onclick="checking(event)" value="서대문구">
+        <label style="cursor:pointer" class="form-check-label" for="서대문구_checkbox">서대문구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="서초구_checkbox"
+               onclick="checking(event)" value="서초구">
+        <label style="cursor:pointer" class="form-check-label" for="서초구_checkbox">서초구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="성동구_checkbox"
+               onclick="checking(event)" value="성동구">
+        <label style="cursor:pointer" class="form-check-label" for="성동구_checkbox">성동구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="성북구_checkbox"
+               onclick="checking(event)" value="성북구">
+        <label style="cursor:pointer" class="form-check-label" for="성북구_checkbox">성북구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="송파구_checkbox"
+               onclick="checking(event)" value="송파구">
+        <label style="cursor:pointer" class="form-check-label" for="송파구_checkbox">송파구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="양천구_checkbox"
+               onclick="checking(event)" value="양천구">
+        <label style="cursor:pointer" class="form-check-label" for="양천구_checkbox">양천구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="영등포구_checkbox"
+               onclick="checking(event)" value="영등포구">
+        <label style="cursor:pointer" class="form-check-label" for="영등포구_checkbox">영등포구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="용산구_checkbox"
+               onclick="checking(event)" value="용산구">
+        <label style="cursor:pointer" class="form-check-label" for="용산구_checkbox">용산구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="은평구_checkbox"
+               onclick="checking(event)" value="은평구">
+        <label style="cursor:pointer" class="form-check-label" for="은평구_checkbox">은평구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="종로구_checkbox"
+               onclick="checking(event)" value="종로구">
+        <label style="cursor:pointer" class="form-check-label" for="종로구_checkbox">종로구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="중구_checkbox"
+               onclick="checking(event)" value="중구">
+        <label style="cursor:pointer" class="form-check-label" for="중구_checkbox">중구</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input style="cursor:pointer" class="form-check-input" type="radio" name="check" id="중랑구_checkbox"
+               onclick="checking(event)" value="중랑구">
+        <label style="cursor:pointer" class="form-check-label" for="중랑구_checkbox">중랑구</label>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="form-check form-check-inline">
+        <button type="button" class="btn btn-outline-secondary" onclick="checking(event)">전체보기</button>
+    </div>
+</div>
+
+
+<div class="mycards">
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
+    </div>
+</div>
+
+
+</body>
