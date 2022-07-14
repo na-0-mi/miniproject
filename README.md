@@ -41,8 +41,8 @@
 <h2> 🎥 시연 영상 🎥 </h2>
 
 ## Youtube URL : https://youtu.be/dOi9DcX1YwE
-<img width="140" alt="썸네일" src="https://files.slack.com/files-pri/T01L2TNGW3T-F03P1RKJY87/9_______________________________.png">
-
+<img width="140" alt="썸네일" src="https://raw.githubusercontent.com/whynotwhywhywhywhy/miniproject/main/9%EC%A1%B0%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png">
+https://raw.githubusercontent.com/whynotwhywhywhywhy/miniproject/main/9%EC%A1%B0%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png
 <br>
 
 <h2> 📷 와이어프레임 📷 </h2>
