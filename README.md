@@ -46,6 +46,10 @@ https://youtu.be/dOi9DcX1YwE
 
 <h2> 📷 와이어프레임 📷 </h2>
 ![image](https://user-images.githubusercontent.com/103303516/178934532-9e29853e-0d6f-4eb0-9fa5-8a8f0b3aad12.png)
+![image](https://user-images.githubusercontent.com/103303516/178939459-e4f9c4d5-02c1-4e25-a0c6-d50321bc1b76.png)
+![image](https://user-images.githubusercontent.com/103303516/178939630-06663af6-00c2-4d93-9d0f-23a5d14a1f23.png)
+![image](https://user-images.githubusercontent.com/103303516/178939737-1e94db53-2e9d-42aa-a4cf-15240c7a8ebf.png)
+
 
 
 <br>
