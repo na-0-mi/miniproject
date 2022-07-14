@@ -8,18 +8,21 @@ Cancel changes
 
 <h2>📅 제작 기간 & 팀원 소개 👨‍💻</h2>
 
-<h4>( 제작 기간: 📆 2022.03.07~ 2022.03.10[4일간] )</h4>
+<h4>( 제작 기간: 📆 2022.03.11~ 2022.03.14[4일간] )</h4>
 
 <table>
     <tr>
         <td align="center">
-        <a href="https://github.com/hyopp">권효빈</a>
+        <a href="">강나오미</a>
         </td>
         <td align="center">
-        <a href="https://github.com/parkmansu?tab=repositories">박만수</a>
+        <a href="">김대연</a>
         </td>
         <td align="center">
-        <a href="https://github.com/hyemco">유혜민</a>
+        <a href="">김지수</a>
+        </td>
+        <td align="center">
+        <a href="">서우혁</a>
         </td>
     </tr>
     <tr>
