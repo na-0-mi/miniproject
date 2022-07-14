@@ -26,13 +26,13 @@ Cancel changes
         </td>
     </tr>
     <tr>
-        <td align="center"> 레이아웃 구성/수정<br>검색 기능 구현
+        <td align="center"> <br>
         </td>
-        <td align="center">레이아웃 구성/수정<br>크롤링<br>꿀팁 등록 API 설계
+        <td align="center"><br>크롤링<br>
         </td>
-        <td align="center">레이아웃 구성/수정<br>페이지 렌더링<br>크롤링<br>로그인/로그아웃/회원가입 기능
+        <td align="center"><br>페이지 렌더링<br><br>
         </td>
-        <td align="center">레이아웃 구성/수정<br>페이지 렌더링<br>크롤링<br>로그인/로그아웃/회원가입 기능
+        <td align="center"><br>페이지 렌더링<br><br>
         </td>
     </tr>
 </table>
@@ -41,13 +41,12 @@ Cancel changes
 
 <h2> 🎥 시연 영상 🎥 </h2>
 
-[![시연 영상](https://user-images.githubusercontent.com/98294357/158057212-74cf48ff-bb0c-4b26-a808-63ca56b41020.png)](https://youtu.be/IhlowL-8jBg)
+
 
 <br>
 
 <h2> 📷 와이어프레임 📷 </h2>
 
-![image](https://user-images.githubusercontent.com/98294357/158056430-3468e127-3f1a-49ad-b6dd-84dc5f271825.png)
 
 <br>
 
@@ -57,16 +56,10 @@ Cancel changes
 + JWT 인증 방식을 이용한 로그인/회원가입 기능
 
 **메인 페이지**
-+ 식물 검색 기능
-+ 식물 리스트업 기능
-+ 리스트업 내 상세 페이지 이동 기능
-+ 로그아웃 기능
 
-**상세 페이지**
-+ 식물 설명 렌더링
-+ 식물별 꿀팁 리스트업
-  : 꿀팁 등록
-  : 꿀팁 삭제
+
+**유저 페이지**
+
 
 <br>
 
