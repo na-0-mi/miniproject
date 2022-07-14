@@ -25,13 +25,13 @@
         </td>
     </tr>
     <tr>
-        <td align="center"> <br>
+        <td align="center">카테고리 설정<br>기능
         </td>
-        <td align="center">카데고리설정기능구현 <br><br>
+        <td align="center">카테고리 설정 <br><br>기능
         </td>
-        <td align="center"><br><br><br>
+        <td align="center">로그인 및<br><br><br>회원가입 기능
         </td>
-        <td align="center">1234<br><br><br>
+        <td align="center">로그인 및<br><br><br>회원가입 기능
         </td>
     </tr>
 </table>
@@ -50,7 +50,9 @@
 <img width="700" alt="글작성화면" src="https://user-images.githubusercontent.com/71538344/133753789-51b1200c-75fd-454c-84c1-47e5de3b746a.png">
 
 
-
+<img width="700" alt="썸네일" src="https://raw.githubusercontent.com/whynotwhywhywhywhy/miniproject/main/9%EC%A1%B0%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png">
+<img width="700" alt="썸네일" src="https://raw.githubusercontent.com/whynotwhywhywhywhy/miniproject/main/9%EC%A1%B0%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png">
+<img width="700" alt="썸네일" src="https://raw.githubusercontent.com/whynotwhywhywhywhy/miniproject/main/9%EC%A1%B0%20%EC%8D%B8%EB%84%A4%EC%9D%BC.png">
 (https://user-images.githubusercontent.com/103303516/178934532-9e29853e-0d6f-4eb0-9fa5-8a8f0b3aad12.png)
 (https://user-images.githubusercontent.com/103303516/178939459-e4f9c4d5-02c1-4e25-a0c6-d50321bc1b76.png)
 (https://user-images.githubusercontent.com/103303516/178939737-1e94db53-2e9d-42aa-a4cf-15240c7a8ebf.png)
