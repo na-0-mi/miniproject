@@ -109,14 +109,15 @@ Cancel changes
 <pre>
 <code>
 /static
-  ├── /main.css
-  └── /nav.css
+  ├── /myjs.js
+  └── /mystyle.css
   └──/img
      └── /logo.png
 /templates
+  ├── /firstpage.html
   ├── /login.html
-  ├── /index.html
-  └── /detail.html
+  ├── /main.html
+  └──/user.html
 ├── /README.md
 └── /app.py
 </code>
