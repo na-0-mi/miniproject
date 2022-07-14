@@ -21,8 +21,8 @@
         <a href="">김지수</a>
         </td>
         <td align="center">
-        <a href="">서우혁</a>
-        11111</td>
+        <a href="">서우혁</a>1234
+        </td>
     </tr>
     <tr>
         <td align="center"> <br>
