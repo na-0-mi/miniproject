@@ -41,6 +41,7 @@
 <h2> 🎥 시연 영상 🎥 </h2>
 
 ## Youtube URL : https://youtu.be/dOi9DcX1YwE
+<img width="140" alt="썸네일" src="https://https://files.slack.com/files-pri/T01L2TNGW3T-F03P1RKJY87/9_______________________________.png">
 
 <br>
 
