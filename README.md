@@ -27,7 +27,7 @@
     <tr>
         <td align="center"> <br>
         </td>
-        <td align="center">카데고리설정기능 <br><br>
+        <td align="center">카데고리설정기능구현 <br><br>
         </td>
         <td align="center"><br><br><br>
         </td>
