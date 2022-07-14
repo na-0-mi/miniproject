@@ -45,6 +45,7 @@
 <br>
 
 <h2> 📷 와이어프레임 📷 </h2>
+![image](https://user-images.githubusercontent.com/103303516/178934532-9e29853e-0d6f-4eb0-9fa5-8a8f0b3aad12.png)
 
 
 <br>
