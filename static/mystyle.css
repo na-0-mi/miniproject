@@ -1,0 +1,96 @@
+body {
+    min-height: 100vh;
+    padding-top: 3.25rem;
+}
+
+
+.is-sparta {
+    color: white !important;
+}
+
+.button.is-sparta {
+    background-color: #97eef0;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #97eef0;
+    color: #97eef0 !important;
+}
+
+.modal-content {
+    width: 300px;
+    max-width: 80%;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.check-boxabc {
+           width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0px 0px 3px 0px gray;
+
+}
+
+
+
+.check-boxa {
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+
+    color: black;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+.check-boxb {
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+
+    color: black;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-boxc {
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+
+    color: black;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
