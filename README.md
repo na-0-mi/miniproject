@@ -25,13 +25,13 @@
         </td>
     </tr>
     <tr>
-        <td align="center">카테고리 설정<br>기능
+        <td align="center">카테고리설정<br>기능
         </td>
-        <td align="center">카테고리 설정 <br><br>기능
+        <td align="center">카테고리설정<br><br>기능
         </td>
-        <td align="center">로그인 및<br><br><br>회원가입 기능
+        <td align="center">로그인 및<br><br><br>회원가입기능
         </td>
-        <td align="center">로그인 및<br><br><br>회원가입 기능
+        <td align="center">로그인 및<br><br><br>회원가입기능
         </td>
     </tr>
 </table>
