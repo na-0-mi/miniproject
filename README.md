@@ -41,17 +41,19 @@
 <h2> 🎥 시연 영상 🎥 </h2>
 
 ## Youtube URL : https://youtu.be/dOi9DcX1YwE
-<img width="140" alt="썸네일" src="https://https://files.slack.com/files-pri/T01L2TNGW3T-F03P1RKJY87/9_______________________________.png">
+<img width="140" alt="썸네일" src="https://files.slack.com/files-pri/T01L2TNGW3T-F03P1RKJY87/9_______________________________.png">
 
 <br>
 
 <h2> 📷 와이어프레임 📷 </h2>
 <img width="700" alt="재판실화면" src="https://user-images.githubusercontent.com/71538344/133754088-5d7c39ca-ccad-4601-babd-1a95402d7077.png">
 <img width="700" alt="글작성화면" src="https://user-images.githubusercontent.com/71538344/133753789-51b1200c-75fd-454c-84c1-47e5de3b746a.png">
-![image](https://user-images.githubusercontent.com/103303516/178934532-9e29853e-0d6f-4eb0-9fa5-8a8f0b3aad12.png)
-![image](https://user-images.githubusercontent.com/103303516/178939459-e4f9c4d5-02c1-4e25-a0c6-d50321bc1b76.png)
-![image](https://user-images.githubusercontent.com/103303516/178939630-06663af6-00c2-4d93-9d0f-23a5d14a1f23.png)
-![image](https://user-images.githubusercontent.com/103303516/178939737-1e94db53-2e9d-42aa-a4cf-15240c7a8ebf.png)
+
+
+
+(https://user-images.githubusercontent.com/103303516/178934532-9e29853e-0d6f-4eb0-9fa5-8a8f0b3aad12.png)
+(https://user-images.githubusercontent.com/103303516/178939459-e4f9c4d5-02c1-4e25-a0c6-d50321bc1b76.png)
+(https://user-images.githubusercontent.com/103303516/178939737-1e94db53-2e9d-42aa-a4cf-15240c7a8ebf.png)
 
 
 
