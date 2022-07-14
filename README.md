@@ -32,6 +32,8 @@ Cancel changes
         </td>
         <td align="center">레이아웃 구성/수정<br>페이지 렌더링<br>크롤링<br>로그인/로그아웃/회원가입 기능
         </td>
+        <td align="center">레이아웃 구성/수정<br>페이지 렌더링<br>크롤링<br>로그인/로그아웃/회원가입 기능
+        </td>
     </tr>
 </table>
 
