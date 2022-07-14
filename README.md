@@ -28,11 +28,11 @@ Cancel changes
     <tr>
         <td align="center"> <br>
         </td>
-        <td align="center"><br>크롤링<br>
+        <td align="center"><br><br>
         </td>
-        <td align="center"><br>페이지 렌더링<br><br>
+        <td align="center"><br><br><br>
         </td>
-        <td align="center"><br>페이지 렌더링<br><br>
+        <td align="center"><br><br><br>
         </td>
     </tr>
 </table>
